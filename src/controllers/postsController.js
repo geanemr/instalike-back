@@ -32,7 +32,7 @@ export async function uploadImage(req, res) {
 
 export async function updateNewPost(req, res) {
   const id = req.params.id;
-  const urlImage = `http://localhost:3000/${id}.png`; //verificar se nao é /uploads
+  const urlImage = `http://localhost:3000/${id}.png`;
   const post = {
     imgUrl: urlImage,
     description: req.body.description,
