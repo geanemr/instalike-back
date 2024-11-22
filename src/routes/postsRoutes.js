@@ -3,6 +3,7 @@ import multer from "multer";
 import {
   listAllPosts,
   newPost,
+  updateNewPost,
   uploadImage,
 } from "../controllers/postsController.js";
 
@@ -22,6 +23,7 @@ const routes = (app) => {
   app.get("/posts", listAllPosts);
   app.post("/posts", newPost);
   app.post("/upload", upload.single("image"), uploadImage);
+  app.put("/upload/:id", updateNewPost)
 };
 
 export default routes;
